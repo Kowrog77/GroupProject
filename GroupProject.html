@@ -7,30 +7,47 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.jpg" type="image/gif" sizes="16x16">
+    <title>Cheechs Pizza!</title>
   </head>
-  <body>
-    <div class="container">
+  <body class="bg">
+    <div class="container rounded" ">
+        <div class="jumbotron bg-light" >
+            <h1 class="display-4">Cheech's Pizza</h1>
+            <p class="lead">The best cheese covered circle bread in the world</p>
+            <hr class="my-4">
+            <p>I remember lying on the floor of my room, staring at a black-and-white television for most of the '80s - watching 'Diff'rent Strokes,' 'Facts of Life,' 'Silver Spoons,' Saturday morning cartoons, and 'Murder, She Wrote' while eating an insane amount of Cheech's pizza. I was sucked into it all. 
+            </p>
+          </div>
+      <div class="jumbotron bg-light">
         <form action="">
             <div class="form-group">
                 <label for="exampleInputName1">Name</label>
-                <input type="text" class="form-control" id="exampleInputName1 Name" aria-describedby="emailHelp" placeholder="Enter Name">
+                <input type="text" class="form-control" id="exampleInputName1 Name" aria-describedby="emailHelp" placeholder="Kristen Markley">
             </div>
             <div class="form-group">
                 <label for="exampleInputName1">Phone</label>
-                <input type="tel" class="form-control" id="exampleInputName1 Phone" aria-describedby="emailHelp" placeholder="Enter Phone">
+                <input type="tel" class="form-control" id="exampleInputName1 Phone" aria-describedby="emailHelp" placeholder="417-123-4567">
             </div>
           
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">What Type of Pizza</label>
+                <select class="form-control" id="exampleFormControlSelect1 piz">
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">How many Cheezy Frisbees Boi's Ya'll Want</label>
+                <select class="form-control" id="exampleFormControlSelect1 qty">
+                </select>
+            </div>
           
-          <select name="" id="piz" value = "What type">
-          </select>
-          <select name="" id="qty" value="How Many">
           </select>
           <br>
           <br>
-          <button class="btn btn-danger" type="submit">Order</button>
+          <button class="btn btn-danger" type="submit" id="submit">Order</button>
         </form>
+      </div>
 
         <script src="OurScript.js"></script>
         <script src="Cacl.js"></script>
