@@ -11,18 +11,36 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
         <form action="">
-
-            <select name="" id="">
-
-            </select>
-            <select name="" id="">
-
-            </select>
-            <input type="submit"value='Submit'>
+            <div class="form-group">
+                <label for="exampleInputName1">Name</label>
+                <input type="text" class="form-control" id="exampleInputName1 Name" aria-describedby="emailHelp" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputName1">Phone</label>
+                <input type="tel" class="form-control" id="exampleInputName1 Phone" aria-describedby="emailHelp" placeholder="Enter Phone">
+            </div>
+          
+          
+          <select name="" id="piz" value = "What type">
+          </select>
+          <select name="" id="qty" value="How Many">
+          </select>
+          <br>
+          <br>
+          <button class="btn btn-danger" type="submit">Order</button>
         </form>
+
         <script src="OurScript.js"></script>
+        <script src="Cacl.js"></script>
+    </div>
+    <div class="container" id="summary">
+        <h3 id ="thankyou"></h3>
+        <p id="subTotal"></p>
+        <p id ="Tax"></p>
+        <p id ="Total"></p>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
