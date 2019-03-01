@@ -1,59 +1,62 @@
-let pizType;
+let piztype;
+let qty;
+let qty2;
 
-let pizArray = ["Pepperoni", "Koen's Famous Olive", "Cheese", "Canadian Bacon", "Fish Sauce"];
+pizArray = ["Pepperoni", "Koen's Famous Olive", "Cheese", "Canadian Bacon", "Fish Sauce"];
+
 
 function addPizza() {
     taskList = document.getElementById('piz');
-    for (var i = 0; i < pizArray.length; i++) {
-        // taskList.innerHTML += '<option value="' + pizArray[i] + '" id="piz' + i + '">' + pizArray[i] + '</option>';
-        taskList.innerHTML += "<option  value = \"" +pizArray[i]+ "\">" + pizArray[i] + "</option>";
+    for (var i = 0; i < (pizArray.length); i++) {
+        taskList.innerHTML += "<option value = \"" +pizArray[i]+ "\">" + pizArray[i] + "</option>";
     }
 }
 
 function addNum() {
-    // taskList = "";
     taskList = document.getElementById('qty');
     for (var i = 0; i < 10; i++) {
         taskList.innerHTML += "<option value = \"" +  (i + 1) + "\">" + (i+1) + "</option>" ;
     }
 }
 
-function addStats() {
-    taskList = "";
-    taskList = document.getElementById('summary');
-
-}
-
-function getPizza(num) {
-
-}
-
-function getNum(num) {
-
-}
-
 addPizza();
 addNum();
 
-// for (let i = 0; i < pizArray.length; i++) {
-//     document.getElementById("piz" + i).addEventListener("click", getPizza.bind(this, i));
-// }
-
-// for (let i = 0; i <= 10; i++) {
-//     document.getElementById("num" + i).addEventListener("click", getNum.bind(this, i));
-// }
-
-// document.getElementById("submit").addEventListener("click", );
-
 function getType(piztype) {
-    var element = document.getElementById("pizzaType");
-    element.value = piztype;
-    element.innerHTML = piztype;
+    let element1 = document.getElementById("pizzaType");
+    element1.value = piztype;
+    element1.innerHTML = piztype;
 }
 function getQty(qty) {
-    var element = document.getElementById("Quantity");
-    element.value = qty;
-    element.innerHTML = qty;
+    let element2 = document.getElementById("Quantity");
+    element2.value = qty;
+    element2.innerHTML = qty;
+	qty2 = qty;
 }
 
+//let name = "Kirsten Markley";
+//let Tel = "417 123 4567";
+let price = 10;
 
+
+
+//qty = getElementById(''); // get qty value
+
+
+
+
+
+function displayOut() {
+	let tax = 0.076;
+	out1 = document.getElementById("SubTotal");
+	let subtotal = (qty2 * 10);
+	out1.innerHTML = ("SubTotal: $" + subtotal);
+	out2 = document.getElementById("Tax");
+	let taxTotal = (subtotal * tax);
+	out2.innerHTML = ("Tax: $" + taxTotal);
+	out3 = document.getElementById("Total");
+	let total = (subtotal * taxTotal);
+	out3.innerHTML = ("Total: $" + total);
+}
+
+document.getElementById("submit").addEventListener("click", displayOut); // Event listener when clicking order button
