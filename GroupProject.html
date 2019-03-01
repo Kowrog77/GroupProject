@@ -34,13 +34,13 @@
             <div class="form-group">
                 <label for="exampleFormControlSelect1">What Type of Pizza</label>
                 <!-- <select class="form-control" id="exampleFormControlSelect1 piz"> -->
-                <select class="form-control" id="piz">
+                <select class="form-control" id="piz"  onchange="getType(this.value)">
                 </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">How many Cheezy Frisbees Boi's Ya'll Want</label>
                 <!-- <select class="form-control" id="exampleFormControlSelect1 qty"> -->
-                <select class="form-control" id="qty">
+                <select class="form-control" id="qty" onchange="getQty(this.value)">
                 </select>
             </div>
           
@@ -55,11 +55,30 @@
         <script src="Cacl.js"></script>
     </div>
     <div class="container" id="summary">
-        <h3 id ="thankyou"></h3>
-        <p id="subTotal"></p>
+        <h3 id ="Thankyou">Thank you!</h3>
+        <div>Order Info:</div>
+
+        <div class="row">
+          <div class="col-sm">
+            <p>Pizza Type: </p>
+          </div>
+          <div class="col-sm">
+            <p id="pizzaType"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+            <p>Quantity: </p>
+          </div>
+          <div class="col-sm">
+            <p id= "Quantity"></p>
+          </div>
+        <p id="SubTotal"></p>
         <p id ="Tax"></p>
         <p id ="Total"></p>
-    </div>
+        <div id = "test"></div>
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="OurScript.js"></script>
