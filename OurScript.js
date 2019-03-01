@@ -3,18 +3,18 @@ let pizType;
 let pizArray = ["Pepperoni", "Koen's Famous Olive", "Cheese", "Canadian Bacon", "Fish Sauce"];
 
 function addPizza() {
-    taskList = "";
     taskList = document.getElementById('piz');
     for (var i = 0; i < pizArray.length; i++) {
-        taskList.innerHTML += '<option value="' + pizArray[i] + '" id="piz' + i + '">' + pizArray[i] + '</option>';
+        // taskList.innerHTML += '<option value="' + pizArray[i] + '" id="piz' + i + '">' + pizArray[i] + '</option>';
+        taskList.innerHTML += "<option  value = \"" +i+ "\">" + pizArray [i] + "</option>";
     }
 }
 
 function addNum() {
-    taskList = "";
+    // taskList = "";
     taskList = document.getElementById('qty');
-    for (var i = 0; i <= 10; i++) {
-        taskList.innerHTML += '<option value="' +  (i + 1) +'" id="num' + (i + 1) + '">' + (i + 1) +'</option>';
+    for (var i = 0; i < 10; i++) {
+        taskList.innerHTML += "<option value = \"" +  (i + 1) + "\">" + (i+1) + "</option>" ;
     }
 }
 
