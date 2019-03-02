@@ -30,17 +30,18 @@
                 <label for="exampleInputName1">Phone</label>
                 <input type="tel" class="form-control" id="exampleInputName1 Phone" aria-describedby="emailHelp" placeholder="417-123-4567">
             </div>
-          
+          <!-- I add the onclick "myFunction to get value from the dropdown menu" -->
             <div class="form-group">
                 <label for="exampleFormControlSelect1">What Type of Pizza</label>
                 <!-- <select class="form-control" id="exampleFormControlSelect1 piz"> -->
-                <select class="form-control" id="piz"  onchange="getType(this.value)">
+                <select class="form-control" id="piz"  onclick="myFunction(this.value)">
                 </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">How many Cheezy Frisbees Boi's Ya'll Want</label>
                 <!-- <select class="form-control" id="exampleFormControlSelect1 qty"> -->
-                <select class="form-control" id="qty" onchange="getQty(this.value)">
+                <!-- <select class="form-control" id="qty" onchange="getQty(this.value)"> -->
+                <select class="form-control" id="qty">
                 </select>
             </div>
           
@@ -50,9 +51,6 @@
           <button class="btn btn-danger" type="submit" id="submit">Order</button>
         </form>
       </div>
-
-        <script src="OurScript.js"></script>
-        <script src="Cacl.js"></script>
     </div>
     <div class="container" id="summary">
         <h3 id ="Thankyou">Thank you!</h3>
@@ -74,9 +72,9 @@
           <div class="col-sm">
             <p id= "Quantity"></p>
           </div>
-        <p id="SubTotal"></p>
-        <p id ="Tax"></p>
-        <p id ="Total"></p>
+        <p id="SubTotal" >Subtotal</p>
+        <p id ="Tax">Tax</p>
+        <p id ="Total">Total</p>
         <div id = "test"></div>
       </div>
     <!-- Optional JavaScript -->
