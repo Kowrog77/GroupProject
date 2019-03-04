@@ -1,4 +1,5 @@
 let piztype;
+let piztype2;
 let qty;
 let qty2;
 
@@ -26,6 +27,7 @@ function getType(piztype) {
     let element1 = document.getElementById("pizzaType");
     element1.value = piztype;
     element1.innerHTML = piztype;
+    piztype2=piztype;
 }
 function getQty(qty) {
     let element2 = document.getElementById("Quantity");
@@ -47,6 +49,7 @@ let price = 10;
 
 
 function displayOut() {
+<<<<<<< HEAD
 	thank = document.getElementById("Thankyou");
 	thank.innerHTML = ("Thank You!");
 	let tax = 0.076;
@@ -61,6 +64,32 @@ function displayOut() {
 	let total = (subtotal + taxTotal);
 	total = total.toFixed(2);	 
 	out3.innerHTML = ("$" + total);
+=======
+    if (isNaN(qty2) || !piztype2 )
+    {
+        window.alert("Please Choose Pizza and Quantity");
+        document.getElementById('_quantity').innerHTML += '<span style="color:red">*</span>';
+        document.getElementById('_type').innerHTML += '<span style="color:red">*</span>';
+    }
+    else
+    {
+        document.getElementById('name').innerHTML = 'Kirsten Markley';
+        document.getElementById('phone').innerHTML = '417 123 4567';
+        document.getElementById('_quantity').innerHTML = 'Pizza Type: ';
+        document.getElementById('_type').innerHTML = 'Quantity: ';
+        let tax = 0.076;
+        out1 = document.getElementById("SubTotal");
+        let subtotal = (qty2 * 10);
+        out1.innerHTML = ("SubTotal: $" + subtotal);
+        out2 = document.getElementById("Tax");
+        let taxTotal = (subtotal * tax);
+        out2.innerHTML = ("Tax: $" + taxTotal.toFixed(2));
+        out3 = document.getElementById("Total");
+        let total = (subtotal * taxTotal);
+        out3.innerHTML = ("Total: $" + total.toFixed(2));
+    }
+    
+>>>>>>> 779fa9a0204ef25c8e85019f64a050f65b9b37aa
 }
 
 document.getElementById("submit").addEventListener("click", displayOut); // Event listener when clicking order button
