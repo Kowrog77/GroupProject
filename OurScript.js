@@ -47,16 +47,20 @@ let price = 10;
 
 
 function displayOut() {
+	thank = document.getElementById("Thankyou");
+	thank.innerHTML = ("Thank You!");
 	let tax = 0.076;
 	out1 = document.getElementById("SubTotal");
 	let subtotal = (qty2 * 10);
-	out1.innerHTML = ("SubTotal: $" + subtotal);
+	out1.innerHTML = ("$" + subtotal);
 	out2 = document.getElementById("Tax");
 	let taxTotal = (subtotal * tax);
-	out2.innerHTML = ("Tax: $" + taxTotal);
+	let taxTotal2 = taxTotal.toFixed(2);
+	out2.innerHTML = ("$" + taxTotal2);
 	out3 = document.getElementById("Total");
-	let total = (subtotal * taxTotal);
-	out3.innerHTML = ("Total: $" + total);
+	let total = (subtotal + taxTotal);
+	total = total.toFixed(2);	 
+	out3.innerHTML = ("$" + total);
 }
 
 document.getElementById("submit").addEventListener("click", displayOut); // Event listener when clicking order button
